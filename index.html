@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FilaZero — A sua vez, sem ficar parado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="marca" href="./">fila<span>zero</span><i></i></a><span class="etiqueta">PROTÓTIPO · JS PURO</span></header>
+<main>
+<section class="intro"><div class="aberto"><span></span> Cantina do campus</div><h1>A sua vez.<br>Sem ficar <em>parado.</em></h1><p>Entre na fila e acompanhe por aqui.<br>A gente avisa quando for a sua vez.</p><div class="passos"><span>01 Entre</span><b>→</b><span>02 Acompanhe</span><b>→</b><span>03 Seja chamado</span></div><div class="nota"><strong>Seu tempo é seu.</strong><br>Uma fila mais simples para todo mundo.</div></section>
+<section class="painel"><nav aria-label="Modo de uso"><button class="ativo" data-tela="cliente">Sou cliente</button><button data-tela="atendente">Sou atendente</button></nav>
+<div id="cliente">
+<div id="entrada"><span class="rotulo">VAMOS COMEÇAR?</span><h2>Guarde seu lugar.</h2><p>Como podemos chamar você?</p><form id="formulario"><label for="nome">Seu primeiro nome</label><input id="nome" maxlength="40" placeholder="Ex.: Lucas" required autocomplete="given-name"><button class="principal">Entrar na fila <span>↗</span></button></form><small>Sem cadastro. Só o seu nome e pronto.</small></div>
+<div id="senha" hidden aria-live="polite"></div>
+</div>
+<div id="atendente" hidden><span class="rotulo">PAINEL DO ATENDENTE</span><h2>Uma pessoa por vez.</h2><p>Chame o próximo e siga o atendimento.</p><div id="atual" class="atual" aria-live="polite"></div><button id="proximo" class="principal">Chamar próximo <span>→</span></button><div class="titulo-fila"><strong>Na espera</strong><span id="quantidade"></span></div><ol id="lista"></ol></div>
+<div class="rodape-painel"><span class="bolinha"></span><span id="resumo"></span></div></section>
+</main>
+<footer><span>Menos espera. Mais vida.</span><span>Demonstração local · dados neste navegador</span></footer>
+<script src="app.js"></script>
+</body></html>
